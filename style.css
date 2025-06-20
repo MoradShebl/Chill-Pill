@@ -42,7 +42,8 @@ h1{
 
 section {
     width: 90vw;
-    height: 90vh;
+    height: 100vh;
+    padding: 1rem;
     margin: auto;
 }
 
