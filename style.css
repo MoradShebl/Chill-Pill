@@ -136,7 +136,7 @@ section {
     overflow: hidden;
     border-radius: 2rem;
     margin-top: 50px;
-    border: var(--c3) 3px solid ;
+    border: var(--c3) 3px solid;
 }
 
 section h2 {
@@ -166,7 +166,7 @@ section h2 {
     translate: 0 -3px;
 }
 
-.reversed-button {
+.button.reversed {
     padding: 10px 0px;
     font-size: 1.6rem;
     font-weight: bold;
@@ -180,7 +180,7 @@ section h2 {
     width: 100%;
 }
 
-.reversed-button:hover {
+.button.reversed:hover {
     background-color: var(--c3);
     color: var(--c0);
     translate: 0 -3px;
@@ -294,8 +294,9 @@ section.high {
 
 .board-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    justify-content: flex-start;
     gap: 2rem;
     margin-top: 2rem;
     perspective: 1000px;
@@ -501,6 +502,23 @@ section.high {
     .button {
         width: 100%;
     }
+
+    .button.reversed {
+        width: 100%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        font-size: 4em;
+    }
 }
 
 @media (max-width: 650px) {
@@ -521,11 +539,16 @@ section.high {
         width: 100%;
         font-size: 1.2rem;
     }
+
+    .button.reversed {
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .hero-content p {
@@ -541,15 +564,28 @@ section.high {
         width: 100%;
         font-size: 1rem;
     }
+
+    .button.reversed {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 400px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.5em;
     }
 
     .hero-content p {
         font-size: 0.8rem;
+    }
+
+    .footer-logo {
+        font-size: 3em;
+    }
+
+    .footer .button {
+        width: 90%;
     }
 }
 
