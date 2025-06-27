@@ -267,7 +267,7 @@ section {
 }
 
 section h2 {
-  font-size: 3rem;
+  font-size: 2.1rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
@@ -1038,12 +1038,12 @@ section.high {
   }
 
   .logo {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .nav-links ul li a,
   .book-therapist-btn {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
@@ -1065,5 +1065,4 @@ section.high {
   .hero-content p {
     font-size: 0.6rem;
   }
-}
 }
