@@ -126,6 +126,23 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // New JavaScript for Hamburger Menu
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburgerMenu && navLinks) {
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close nav menu when a link is clicked (optional, but good for UX)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });
 
 document.addEventListener('keydown', function (e) {
@@ -133,6 +150,17 @@ document.addEventListener('keydown', function (e) {
         const activeMembers = document.querySelectorAll('.board-member:hover');
         activeMembers.forEach(member => {
             member.blur();
+        });
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const bookButton = document.querySelector('.book-therapist-btn');
+
+    if (bookButton) {
+        bookButton.addEventListener('click', () => {
+            console.log('Book a therapist button clicked!');
+            // In a real application, you might redirect to a booking page or open a modal here.
+            // window.location.href = 'https://example.com/book-therapist';
         });
     }
 });
